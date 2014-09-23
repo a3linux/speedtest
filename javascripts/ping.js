@@ -8,15 +8,14 @@ function getPing() {
     }
   }
   start = new Date();
-  client.open("HEAD", "/speedtest/ping.txt"); //static file
+  client.open("HEAD", "/speedtest/ping.txt", true); //HEAD static file
   client.send();
 }
 
 function pingDone(start) {
   done = new Date();
-  //ms = done.valueOf() - start.valueOf();
   ms = done.getTime() - start.getTime();
-  alert(ms + "ms ping time");
+  alert(done.getTime() + "ms(Done)" + start.getTime() + "ms(Start)" + ms + "ms ping time");
 }
 
 function getClient() {
