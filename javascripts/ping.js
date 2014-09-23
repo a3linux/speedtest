@@ -16,6 +16,7 @@ function getPing() {
       var done = new Date();
       var start_ms = start.getTime();
       var done_ms = done.getTime();
+      var ms = done_ms - start_ms;
       alert(start_ms + 'ms(Start) ' + done_ms + 'ms(Done) ' + ms + 'ms Ping Latency');
       client.onreadystatechange = null;
     }
