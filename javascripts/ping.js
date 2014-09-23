@@ -18,7 +18,7 @@ function getPing() {
       var start_ms = start.getTime();
       var done_ms = done.getTime();
       var ms = done_ms - start_ms;
-      alert(start_ms + 'ms(Start) ' + done_ms + 'ms(Done) ' + ms + 'ms Ping Latency');
+      $('#ping-check-result').append('<div>HTTP Ping延迟 ' + ms + 'ms!</div>');
       client.onreadystatechange = null;
     }
   };
@@ -26,3 +26,11 @@ function getPing() {
   client.open("GET", "/speedtest/ping.txt?" + Math.random(), true);
   client.send();
 }
+
+$(document).ready(function(){
+  getPing();
+  getPing();
+  getPing();
+  getPing();
+  getPing();
+});
