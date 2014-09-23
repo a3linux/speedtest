@@ -14,7 +14,8 @@ function getPing() {
 
 function pingDone(start) {
   done = new Date();
-  ms = done.valueOf() - start.valueOf();
+  //ms = done.valueOf() - start.valueOf();
+  ms = done.getTime() - start.getTime();
   alert(ms + "ms ping time");
 }
 
