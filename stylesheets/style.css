@@ -362,6 +362,6 @@ td {
 }
 
 #ping-check-result {
-    overflow: hidden;
-    height: 100px;
+    overflow: scroll;
+    height: 120px;
 }

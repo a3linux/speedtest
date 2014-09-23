@@ -27,7 +27,19 @@ function getPing() {
   client.send();
 }
 
-$(window).load(function(){
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  var i = 0;
+  for (i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds) {
+      break;
+    }
+  }
+}
+$(window).load(function() {
+  $('#ping-check-result').empty().append('<b>Doing HTTP Ping Test ...</b>');
+  sleep(3000);
+  $('#ping-check-result').empty();
   getPing();
   getPing();
   getPing();
