@@ -38,12 +38,14 @@ function sleep(milliseconds) {
 }
 
 $(window).load(function() {
-  $('#ping-check-result').append('<b>HTTP Ping Test ...</b>');
-  sleep(5000);
-  $('#ping-check-result').empty();
-  getPing();
-  getPing();
-  getPing();
-  getPing();
-  getPing();
+  $('#ping-check-result').append('点击<b>Run</b>按钮执行HTTP Ping时延测试');
+  $('input[type="image"]').removeAttr('disabled');
+  $('#run-ping-check').click(function(){
+    $('#ping-check-result').empty();
+    getPing();
+    getPing();
+    getPing();
+    getPing();
+    getPing();
+  });
 });
