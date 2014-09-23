@@ -22,6 +22,6 @@ function getPing() {
     }
   };
   start = new Date();
-  client.open("GET", "/speedtest/ping.txt", true); //syndnronous to HEAD static file
+  client.open("GET", "/speedtest/ping.txt?" + Math.random(), true);
   client.send();
 }
