@@ -360,3 +360,8 @@ td {
     width: 500px;
     height: auto;
 }
+
+#ping-check-result {
+    overflow: hidden;
+    height: 100px;
+}

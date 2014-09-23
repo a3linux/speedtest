@@ -27,7 +27,7 @@ function getPing() {
   client.send();
 }
 
-$(document).ready(function(){
+$(window).load(function(){
   getPing();
   getPing();
   getPing();
