@@ -19,40 +19,42 @@
   </header>
 
   <div role="main" style="margin:30px">
-   <h1>About HTML5 Speed Test</h1>
+   <h1>About HTML5 Speed Test（关于本测试程序）</h1>
    <h3>Background</h3>
+   <h4>为了在中国国内运行本测试，我们移除了关于GA（Google Analysitics）的部分code并做了部分汉化！
+    </h4>
    <p>
-    This HTML5 Speed Test was written for <a href="http://bandwidth.com/">Bandwidth.com</a> by Anders Brownworth. 
+    This HTML5 Speed Test was written for <a href="http://bandwidth.com/">Bandwidth.com</a> by Anders Brownworth.
     (<a href="http://twitter.com/anders94">@Anders94</a>) Traditionally, browser-based speed tests tended to be
-    Java applet, Flash or JavaScript/HTML driven. This speed test is of the JavaScript variant but adds to it some 
+    Java applet, Flash or JavaScript/HTML driven. This speed test is of the JavaScript variant but adds to it some
     niceties from the HTML5 chest of goodies. Flash and Java applet based speed tests require external plugins to
     operate which are notably absent from most mobile operating systems like iOS and Android.
    </p>
    <h3>Technology</h3>
    <p>
-    As its name implies, this HTML5 speed test does not rely on Flash or Java applet components. Unlike the previous 
+    As its name implies, this HTML5 speed test does not rely on Flash or Java applet components. Unlike the previous
     generation of HTML speed tests, this HTML5 speed test checks both upload and download capacity. It does this by
-    spawning two iframes and downloading data through one and uploading it through the other. This has the convenient 
-    side effect of being able to test upload and download capacity at the same time. Some internet connections, notably 
+    spawning two iframes and downloading data through one and uploading it through the other. This has the convenient
+    side effect of being able to test upload and download capacity at the same time. Some internet connections, notably
     asynchronous DSL, degrade when you do that.
    </p>
    <p>
-    On the plus side, this HTML5 speed test works on iPhones, iPods, iPads and Android devices. It should work with 
+    On the plus side, this HTML5 speed test works on iPhones, iPods, iPads and Android devices. It should work with
     just about every HTML5 browser out there which has become a significant number. If you run into a browser that
     doesn't seem to work, drop a note to <a href="http://twitter.com/anders94">@Anders94</a> and let me know.
    </p>
    <h3>Drawbacks</h3>
    <p>
-    HTML5 is young. Some browsers don't yet support it and those that do don't always work as quickly as you would 
-    like. A proper speed test would use UDP but unfortunately HTML5 doesn't yet directly support it. We are working 
+    HTML5 is young. Some browsers don't yet support it and those that do don't always work as quickly as you would
+    like. A proper speed test would use UDP but unfortunately HTML5 doesn't yet directly support it. We are working
     with the &lt;video&gt; tag to do a UDP based test using RTSP but widespread support is still an issue. Over time
     this test should get better.
    </p>
    <p>
-    This HTML5 speed test will tend to be conservative for two critical reasons. Browsers don't always work as fast 
-    as one might like, posing an upper limit on the speed test's capacity. Additionally, all data transfers are done 
-    via HTTP which runs over TCP. If packets get lost, TCP will retransmit the packets without notifying the speed 
-    test so speeds will trend lower than the actual rates. In time as we work to make the test better, we hope to 
+    This HTML5 speed test will tend to be conservative for two critical reasons. Browsers don't always work as fast
+    as one might like, posing an upper limit on the speed test's capacity. Additionally, all data transfers are done
+    via HTTP which runs over TCP. If packets get lost, TCP will retransmit the packets without notifying the speed
+    test so speeds will trend lower than the actual rates. In time as we work to make the test better, we hope to
     fix these bottlenecks by limiting the browser's workload and using UDP. These are the early days - hang with us!
    </p>
    <p>
@@ -71,16 +73,5 @@
   <footer>
 
   </footer>
-
-  <script type="text/javascript">
-   var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-74866-12']);
-   _gaq.push(['_trackPageview']);
-   (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-   })();
-  </script>
 </body>
 </html>
