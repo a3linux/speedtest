@@ -1,27 +1,26 @@
+function getClient() {
+  if (window.XMLHttpRequest) {
+    return new XMLHttpRequest();
+  }
+  if (window.ActiveXObject) {
+    return new ActiveXObject('MSXML2.XMLHTTP.3.0');
+  }
+  throw ("No XMLHttpRequest Object Available.");
+}
+
 function getPing() {
   var start;
   var client = getClient(); // xmlhttprequest object
   client.onreadystatechange = function() {
     if (client.readyState > 0) {
-      pingDone(start); //handle ping
-      client.onreadystatechange = null; //remove handler
+      var done = new Date();
+      var start_ms = start.getTime();
+      var done_ms = done.getTime();
+      alert(start_ms + 'ms(Start) ' + done_ms + 'ms(Done) ' + ms + 'ms Ping Latency');
+      client.onreadystatechange = null;
     }
-  }
+  };
   start = new Date();
-  client.open("HEAD", "/speedtest/ping.txt", false); //syndnronous to HEAD static file
+  client.open("GET", "/speedtest/ping.txt", true); //syndnronous to HEAD static file
   client.send();
-}
-
-function pingDone(start) {
-  done = new Date();
-  ms = done.getTime() - start.getTime();
-  alert(done.getTime() + "ms(Done)" + start.getTime() + "ms(Start)" + ms + "ms ping time");
-}
-
-function getClient() {
-  if (window.XMLHttpRequest)
-    return new XMLHttpRequest();
-  if (window.ActiveXObject)
-    return new ActiveXObject('MSXML2.XMLHTTP.3.0');
-  throw ("No XMLHttpRequest Object Available.");
 }
