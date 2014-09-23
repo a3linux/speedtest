@@ -10,9 +10,10 @@ function getClient() {
 
 function getPing() {
   var start;
-  var client = getClient(); // xmlhttprequest object
+  var client = getClient();
   client.onreadystatechange = function() {
-    if (client.readyState > 0) {
+    // 0 not initialized 1 connection est 2 request received 3 processing request 4 request finished and response is ready
+    if (client.readyState == 4 && client.status == 200) {
       var done = new Date();
       var start_ms = start.getTime();
       var done_ms = done.getTime();
