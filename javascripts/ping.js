@@ -8,7 +8,7 @@ function getPing() {
     }
   }
   start = new Date();
-  client.open("HEAD", "/speedtest/ping.txt", true); //HEAD static file
+  client.open("HEAD", "/speedtest/ping.txt", false); //syndnronous to HEAD static file
   client.send();
 }
 
