@@ -14,14 +14,14 @@
 
    function a( f ) {
      log = document.getElementById( "log" );
-     log.textContent += "downloader initialized with " + f + "\n";
+     log.textContent += "下载初始化" + f + "\n";
      file = f;
      parent.onMessage( "DI " + file + " " + new Date( ).getTime( ) );
 
    }
 
    function b( ) {
-     log.textContent += "sent " + blob.length + "\n";
+     log.textContent += "发送 " + blob.length + "\n";
      return( blob );
 
    }
