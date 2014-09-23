@@ -36,9 +36,10 @@ function sleep(milliseconds) {
     }
   }
 }
+
 $(window).load(function() {
-  $('#ping-check-result').empty().append('<b>Doing HTTP Ping Test ...</b>');
-  sleep(3000);
+  $('#ping-check-result').append('<b>HTTP Ping Test ...</b>');
+  sleep(5000);
   $('#ping-check-result').empty();
   getPing();
   getPing();
