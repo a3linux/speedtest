@@ -360,8 +360,25 @@ td {
     width: 500px;
     height: auto;
 }
-
 #ping-check-result {
     overflow: scroll;
     height: 120px;
+    background: #000;
+    color: #00FF00;
+    margin-top: 5px;
+}
+.small {
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFF00;
+    background: #000;
+}
+.run-ping-check {
+    display: block;
+    background: #444888;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444888), color-stop(100%, #777));
+    background-image: -webkit-linear-gradient(#444888, #777);
+    background-image: -moz-linear-gradient(#444888, #777);
+    background-image: -o-linear-gradient(#444888, #777);
+    border: 1px dotted;
 }

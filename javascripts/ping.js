@@ -18,7 +18,7 @@ function getPing() {
       var start_ms = start.getTime();
       var done_ms = done.getTime();
       var ms = done_ms - start_ms;
-      $('#ping-check-result').append('<div>HTTP Ping延迟 ' + ms + 'ms!</div>');
+      $('#ping-check-result').append('<div class="small"><p class="small">HTTP Ping延迟 ' + ms + 'ms!</p></div>');
       client.onreadystatechange = null;
     }
   };
@@ -38,7 +38,7 @@ function sleep(milliseconds) {
 }
 
 $(window).load(function() {
-  $('#ping-check-result').append('点击<b>Run</b>按钮执行HTTP Ping时延测试');
+  $('#ping-check-result').append('<p class="small">点击<b>运行时延测试</b>按钮执行HTTP Ping时延测试</p>');
   $('input[type="image"]').removeAttr('disabled');
   $('#run-ping-check').click(function(){
     $('#ping-check-result').empty();
