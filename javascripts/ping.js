@@ -18,7 +18,7 @@ function getPing() {
       var start_ms = start.getTime();
       var done_ms = done.getTime();
       var ms = done_ms - start_ms;
-      $('#ping-check-result').append('<p class="small">HTTP Ping延迟 ' + ms + 'ms!</p>');
+      $('#ping-check-result').append('HTTP Ping延迟 ' + ms + 'ms!');
       client.onreadystatechange = null;
     }
   };
